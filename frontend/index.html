@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Algo Visualizer · Sort & Search</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1><span class="bolt">⚡</span> Algo Visualizer</h1>
+      <p class="sub">Step-wise divide &amp; conquer · Sorting &amp; Searching</p>
+    </header>
+
+    <section class="panel">
+      <div class="row">
+        <label class="field">
+          <span>Category</span>
+          <select id="category">
+            <option value="sorting">Sorting</option>
+            <option value="searching">Searching</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Algorithm</span>
+          <select id="algorithm"></select>
+        </label>
+
+        <label class="field target-field" hidden>
+          <span>Target</span>
+          <input id="target" type="number" placeholder="e.g. 7" />
+        </label>
+      </div>
+
+      <div class="row sliders">
+        <label class="field slider-field">
+          <span>Size <b id="sizeVal">10</b></span>
+          <input id="size" type="range" min="1" max="100" value="10" />
+        </label>
+        <label class="field slider-field">
+          <span>Speed <b id="speedVal">50</b></span>
+          <input id="speed" type="range" min="1" max="100" value="50" />
+        </label>
+      </div>
+
+      <div class="row input-row">
+        <label class="field grow">
+          <span>Array (type numbers separated by space, then press <kbd>Enter</kbd>)</span>
+          <input id="manual" type="text" placeholder="e.g.  5 2 8 1 9 3" autocomplete="off" />
+        </label>
+        <button id="randomBtn" class="ghost">🎲 Random</button>
+        <button id="runBtn" class="primary">Run ▶</button>
+      </div>
+
+      <p class="hint" id="hint">Tip: type your own array, press Enter, then click Run.</p>
+    </section>
+
+    <section class="stage">
+      <div id="board" class="board"></div>
+      <div id="legend" class="legend"></div>
+    </section>
+
+    <footer class="status">
+      <span>Algorithm: <b id="algoLabel">—</b></span>
+      <span>Steps: <b id="stepCount">—</b></span>
+      <span>Status: <b id="status">idle</b></span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
