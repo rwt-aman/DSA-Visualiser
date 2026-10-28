@@ -1,4 +1,4 @@
-# Algo Visualizer
+# DSA Visualizer
 
 Step-wise sorting & searching visualizer.
 
